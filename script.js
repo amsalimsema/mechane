@@ -1,15 +1,18 @@
-// Add any JavaScript if needed for additional functionality or animations.
+// Intersection Observer
 document.addEventListener('DOMContentLoaded', () => {
-  // Example of a subtle animation on scroll
-  const elements = document.querySelectorAll('.service')
+  const observerOptions = {
+    threshold: 0.1,
+  }
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in')
+        entry.target.classList.add('show')
+        observer.unobserve(entry.target)
       }
     })
-  })
+  }, observerOptions)
 
+  const elements = document.querySelectorAll('.fade-in-up')
   elements.forEach((el) => observer.observe(el))
 })
