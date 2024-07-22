@@ -4,66 +4,150 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradient Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-      .orange-gradient {
-        padding: 4rem;
-        background: linear-gradient(to bottom, #fff2e6 0%, #ffcc99 100%);
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        background-color: #2b363c;
+        font-family: 'Inter', sans-serif;
       }
-      .about {
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px);
-        border: 1px solid rgba(255, 255, 255, 0.84);
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9px);
-        -webkit-backdrop-filter: blur(5.1px);
-        border: 1px solid rgba(255, 255, 255, 0.84);
+
+      * {
+        margin: 0;
       }
-      .about-card {
-        /* margin: 6rem;
-        border: 2px solid white;
-        width: 70vw;
-        height: 80vh;
-        margin: auto; */
-        background-image: url('adobe2.webp');
-        background-repeat: no-repeat;
-        /* background-position: center; */
-        background-size: contain;
+
+      .wrapper {
+        width: 90%;
+        max-width: 1536px;
+        margin-inline: auto;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 1) 20%,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0)
+        );
+      }
+
+      @keyframes scrollLeft {
+        to {
+          left: -200px;
+        }
+      }
+
+      .item {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 80px;
+        border-radius: 6px;
+        position: absolute;
+        left: max(calc(200px * 8), 100%);
+        animation-name: scrollLeft;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .item1 {
+        animation-delay: calc(30s / 8 * (8 - 1) * -1);
+      }
+
+      .item2 {
+        animation-delay: calc(30s / 8 * (8 - 2) * -1);
+      }
+
+      .item3 {
+        animation-delay: calc(30s / 8 * (8 - 3) * -1);
+      }
+
+      .item4 {
+        animation-delay: calc(30s / 8 * (8 - 4) * -1);
+      }
+
+      .item5 {
+        animation-delay: calc(30s / 8 * (8 - 5) * -1);
+      }
+
+      .item6 {
+        animation-delay: calc(30s / 8 * (8 - 6) * -1);
+      }
+
+      .item7 {
+        animation-delay: calc(30s / 8 * (8 - 7) * -1);
+      }
+
+      .item8 {
+        animation-delay: calc(30s / 8 * (8 - 8) * -1);
       }
     </style>
   </head>
   <body>
-    <div class="orange-gradient">
-      <div class="flex flex-wrap about">
-        <div class="w-full sm:w-1/2 p-2 about-card">
-          <img
-            src="adobe2.webp"
-            alt="Placeholder Image"
-            class="w-full h-auto"
-          />
-        </div>
-        <div class="w-full sm:w-1/2">
-          <p class="text-gray-700 uppercase">Machane at a glance</p>
-          <p class="mb-4">
-            Machane mining company excels in exploring, extracting, and
-            processing valuable minerals. We prioritize sustainability by using
-            advanced technologies to reduce environmental impact and enhance
-            resource efficiency. Our expert team upholds high safety and quality
-            standards, providing top-notch materials that fuel innovation and
-            growth in various industries. We lead the mining sector from
-            exploration to processing, supporting community development and
-            global prosperity.
-          </p>
-        </div>
+    <div class="container mx-auto text-gray-100 mt-8">
+      <h2 class="text-2xl">Machame: Experts in Stone and Minerals</h2>
+      <p>
+        Machame is a leading company specializing in the exploration,
+        extraction, and processing of high-quality natural resources. We are
+        committed to providing our clients with a wide range of products,
+        including Granite, Graphite, Limestone, Nickel, Manganese, Lithium.
+      </p>
+    </div>
+    <div class="wrapper mt-8">
+      <div
+        class="item item1 text-gray-100 bg-white opacity-50 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Granite
+      </div>
+      <div
+        class="item item2 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Graphite
+      </div>
+      <div
+        class="item item3 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Limestone
+      </div>
+      <div
+        class="item item4 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Nickel
+      </div>
+      <div
+        class="item item5 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Manganese
+      </div>
+      <div
+        class="item item6 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Lithium
+      </div>
+      <div
+        class="item item7 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Copper
+      </div>
+      <div
+        class="item item8 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Iron
       </div>
     </div>
   </body>
