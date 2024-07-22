@@ -18,12 +18,13 @@
       body {
         font-family: 'Inter', sans-serif;
         background-color: #2b363c;
+        margin: 0;
+        box-sizing: border-box;
       }
       .screen {
         height: 100vh;
       }
       .card {
-        /* background: url('adobe.webp'); */
         background-size: cover;
         background-position: center;
         background-color: #f79422;
@@ -32,25 +33,10 @@
         padding: 4rem;
         background: linear-gradient(to bottom, #fff2e6 0%, #ffcc99 100%);
       }
-      .about {
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px);
-        border: 1px solid rgba(255, 255, 255, 0.84);
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9px);
-        -webkit-backdrop-filter: blur(5.1px);
-        border: 1px solid rgba(255, 255, 255, 0.84);
-      }
       @media (max-width: 912px) {
         .screen {
           height: auto;
-          min-height: 60vh; /* Optional: ensures a minimum height */
+          min-height: 65vh; /* Optional: ensures a minimum height */
         }
       }
       @media (max-width: 520px) {
@@ -59,7 +45,6 @@
           min-height: 65vh; /* Optional: ensures a minimum height */
         }
       }
-
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -70,15 +55,78 @@
           transform: translateY(0);
         }
       }
-
       .fade-in-up {
         animation: fadeInUp 1s ease-in-out;
       }
-      /* 
-      .bg-gradient-to-left {
-       background: linear-gradient(to left, #6a0dad, #2c2c2c); 
-        
-      } */
+      .wrapper {
+        width: 90%;
+        max-width: 1536px;
+        margin-inline: auto;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+
+        mask-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 1) 20%,
+          rgba(0, 0, 0, 1) 80%,
+          rgba(0, 0, 0, 0)
+        );
+      }
+
+      @keyframes scrollLeft {
+        to {
+          left: -200px;
+        }
+      }
+
+      .item {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 80px;
+        border-radius: 6px;
+        position: absolute;
+        left: max(calc(200px * 8), 100%);
+        animation-name: scrollLeft;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      .item1 {
+        animation-delay: calc(30s / 8 * (8 - 1) * -1);
+      }
+
+      .item2 {
+        animation-delay: calc(30s / 8 * (8 - 2) * -1);
+      }
+
+      .item3 {
+        animation-delay: calc(30s / 8 * (8 - 3) * -1);
+      }
+
+      .item4 {
+        animation-delay: calc(30s / 8 * (8 - 4) * -1);
+      }
+
+      .item5 {
+        animation-delay: calc(30s / 8 * (8 - 5) * -1);
+      }
+
+      .item6 {
+        animation-delay: calc(30s / 8 * (8 - 6) * -1);
+      }
+
+      .item7 {
+        animation-delay: calc(30s / 8 * (8 - 7) * -1);
+      }
+
+      .item8 {
+        animation-delay: calc(30s / 8 * (8 - 8) * -1);
+      }
     </style>
   </head>
   <body>
@@ -106,25 +154,81 @@
         </a>
       </div>
     </header>
+    <!-- About intro -->
+    <div class="container mx-auto mt-8 text-gray-100">
+      <h2 class="text-3xl mb-2 fade-in-up p-3 sm:p-0">
+        <span class="border-l border-l-4 border-l-orange-500"
+          >&nbsp;Machame: Experts in Stone and Minerals</span
+        >
+      </h2>
+      <p class="fade-in-up p-3 sm:p-0">
+        Machame is a leading company specializing in the exploration,
+        extraction, and processing of high-quality natural resources. We are
+        committed to providing our clients with a wide range of products,
+        including Granite, Graphite, Limestone, Nickel, Manganese, Lithium.
+      </p>
+    </div>
+    <div class="wrapper mt-8">
+      <div
+        class="item item1 text-gray-100 bg-white opacity-50 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Granite
+      </div>
+      <div
+        class="item item2 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Graphite
+      </div>
+      <div
+        class="item item3 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Limestone
+      </div>
+      <div
+        class="item item4 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Nickel
+      </div>
+      <div
+        class="item item5 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Manganese
+      </div>
+      <div
+        class="item item6 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Lithium
+      </div>
+      <div
+        class="item item7 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Copper
+      </div>
+      <div
+        class="item item8 text-gray-100 rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+      >
+        Iron
+      </div>
+    </div>
     <!-- ABOUT -->
 
     <div class="container mx-auto mt-8">
       <!-- Main Heading -->
-      <div class="text-center mt-12 md:mt-20 mb-12 fade-in-up">
-        <p class="text-gray-100 text-2xl md:text-5xl">
+      <div class="mt-12 md:mt-20 mb-12">
+        <h2 class="text-gray-100 text-3xl fade-in-up p-3 sm:p-0">
           <span class="border-l border-l-4 border-l-orange-500"
             >&nbsp;About Machame</span
           >
-        </p>
+        </h2>
       </div>
       <!-- Content Section -->
       <div
-        class="flex flex-col md:flex-row justify-center items-center fade-in-up rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        class="flex flex-col md:flex-row justify-center items-center rounded bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
       >
         <!-- Left Container -->
         <div class="md:w-1/3 p-2">
           <img
-            src="ip3.jpg"
+            src="MineC.jpg"
             alt="Placeholder Image"
             class="w-full h-auto rounded"
           />
@@ -132,8 +236,8 @@
 
         <!-- Right Container -->
         <div class="md:w-2/3 p-2">
-          <p class="text-gray-100 uppercase mb-2">Machame at a glance:</p>
-          <p class="mb-4 text-gray-100">
+          <h3 class="text-gray-100 text-2xl fade-in-up">Machame At A Glance</h3>
+          <p class="mb-4 text-gray-100 fade-in-up">
             Our mining company focuses on the exploration, extraction, and
             processing of valuable minerals. Committed to sustainability, we use
             advanced technologies to minimize environmental impact and maximize
@@ -144,16 +248,28 @@
             final processing, contributing to global community development and
             prosperity.
           </p>
+          <h3 class="text-gray-100 text-2xl">Mission:</h3>
+          <p class="text-gray-100 mb-4">
+            To responsibly explore, extract, and process minerals with a
+            commitment to environmental stewardship, community engagement, and
+            safety for our employees.
+          </p>
+          <h3 class="text-gray-100 text-2xl">Vision:</h3>
+          <p class="text-gray-100 mb-4">
+            To become a globally recognized leader in the mining industry,
+            renowned for our sustainable practices, operational excellence, and
+            unwavering commitment to a better future.
+          </p>
         </div>
       </div>
     </div>
     <!-- end of about -->
-    <div class="text-center mt-12 md:mt-20 mb-12 fade-in-up">
-      <p class="text-gray-100 text-2xl md:text-5xl">
+    <div class="container mx-auto mt-12 md:mt-20 mb-12">
+      <h2 class="text-gray-100 text-3xl fade-in-up p-3 sm:p-0">
         <span class="border-l border-l-4 border-l-orange-500"
           >&nbsp;Machame Mining Process</span
         >
-      </p>
+      </h2>
     </div>
     <div class="p-3 sm:p-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,12 +280,12 @@
         >
           <div class="absolute inset-0 bg-black opacity-30"></div>
           <div
-            class="fade-in-up relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
+            class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
           >
-            <h3 class="text-xl font-semibold mb-2">
+            <h3 class="text-xl font-semibold mb-2 fade-in-up">
               Exploration and Discovery
             </h3>
-            <p class="mb-4">
+            <p class="mb-4 fade-in-up">
               Our journey starts with extensive exploration using advanced
               geophysical and geochemical techniques to locate promising mineral
               deposits.
@@ -185,12 +301,12 @@
         >
           <div class="absolute inset-0 bg-black opacity-30"></div>
           <div
-            class="fade-in-up relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-white"
+            class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-white"
           >
-            <h3 class="text-xl font-semibold mb-2">
+            <h3 class="text-xl font-semibold mb-2 fade-in-up">
               Extraction and Processing
             </h3>
-            <p class="mb-4">
+            <p class="mb-4 fade-in-up">
               After identifying a mineral deposit, we use state-of-the-art
               machinery and sustainable practices to carefully extract and
               process the ore.
@@ -206,10 +322,12 @@
         >
           <div class="absolute inset-0 bg-black opacity-30"></div>
           <div
-            class="fade-in-up relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
+            class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
           >
-            <h3 class="text-xl font-semibold mb-2">Environmental Management</h3>
-            <p class="mb-4">
+            <h3 class="text-xl font-semibold mb-2 fade-in-up">
+              Environmental Management
+            </h3>
+            <p class="mb-4 fade-in-up">
               We prioritize environmental management, implementing waste
               management, water conservation, and land rehabilitation to
               minimize ecological impact.
@@ -225,16 +343,16 @@
     <!-- Contact -->
     <div class="shadow-lg">
       <div class="flex flex-col items-center justify-center p-6 mt-8">
-        <h2 class="text-2xl text-gray-100 mb-4 text-center">
+        <h2 class="text-3xl text-gray-100 mb-4 text-center fade-in-up">
           Let's Find More That Brings Us Together
         </h2>
 
-        <p class="text-base text-gray-100 mb-2 text-center">
+        <p class="text-base text-gray-100 mb-2 text-center fade-in-up">
           <span class="border-l border-l-4 border-l-orange-500">
             &nbsp;Find Us Here:
           </span>
         </p>
-        <p class="text-base text-gray-100 mb-2 text-center">
+        <p class="text-base text-gray-100 mb-2 text-center fade-in-up">
           Plot 83 A, Prince charles Drive<br />
           Moyo Close kololo, Kampala, Uganda
         </p>
