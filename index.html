@@ -45,12 +45,7 @@
           min-height: 65vh; /* Optional: ensures a minimum height */
         }
       }
-      @media (max-width: 321px) {
-        .team img {
-          width: 40px;
-          height: 40px;
-        }
-      }
+
       @keyframes fadeInUp {
         from {
           opacity: 0;
@@ -284,11 +279,19 @@
         <span style="border-left: 2px solid #f79422">&nbsp;Team</span>
       </h2>
     </div>
-    <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
-      <div class="text-center">
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4 w-full">
+      <div class="sm:text-center text-start">
         <img src="F.JPG" alt="Image 1" class="team" />
 
-        <div class="p-4 text-gray-100">
+        <div class="p-1 sm:p-4 text-gray-100">
+          <p class="font-bold">Emma White</p>
+          <p>Product Manager</p>
+        </div>
+      </div>
+      <div class="sm:text-center text-start">
+        <img src="F.JPG" alt="Image 1" class="team" />
+
+        <div class="p-1 sm:p-4 text-gray-100">
           <p class="font-bold">Emma White</p>
           <p>Product Manager</p>
         </div>
@@ -296,7 +299,7 @@
       <div class="text-center">
         <img src="F.JPG" alt="Image 1" class="team" />
 
-        <div class="p-4 text-gray-100">
+        <div class="p-1 sm:p-4 text-gray-100">
           <p class="font-bold">Emma White</p>
           <p>Product Manager</p>
         </div>
@@ -304,15 +307,7 @@
       <div class="text-center">
         <img src="F.JPG" alt="Image 1" class="team" />
 
-        <div class="p-4 text-gray-100">
-          <p class="font-bold">Emma White</p>
-          <p>Product Manager</p>
-        </div>
-      </div>
-      <div class="text-center">
-        <img src="F.JPG" alt="Image 1" class="team" />
-
-        <div class="p-4 text-gray-100">
+        <div class="p-1 sm:p-4 text-gray-100">
           <p class="font-bold">Emma White</p>
           <p>Product Manager</p>
         </div>
