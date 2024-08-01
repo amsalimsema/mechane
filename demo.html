@@ -19,14 +19,26 @@
       *::before,
       *::after {
         box-sizing: border-box;
-        background-color: #2b363c;
+        /* background-color: #2b363c; */
         font-family: 'Inter', sans-serif;
       }
 
       * {
         margin: 0;
       }
-
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 1s ease-in-out;
+      }
       .wrapper {
         width: 90%;
         max-width: 1536px;
@@ -43,13 +55,11 @@
           rgba(0, 0, 0, 0)
         );
       }
-
       @keyframes scrollLeft {
         to {
           left: -200px;
         }
       }
-
       .item {
         justify-content: center;
         display: flex;
@@ -99,43 +109,179 @@
     </style>
   </head>
   <body>
-    <div class="mt-8">
-      <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
-        <div>
-          <img
-            src="F.JPG"
-            alt="Image 1"
-            class="rounded-tl-[5rem] rounded-bl-[5rem] rounded-br-[5rem] w-[150px] h-[150px] below-400:w-[60px] below-400:h-[60px] text-center"
-          />
-
-          <div class="p-4 text-gray-100">
-            <p class="font-bold">Emma White</p>
-            <p>Product Manager</p>
-          </div>
+    <!-- marque -->
+    <div class="w-full pb-12" style="background-color: #f8f8f8">
+      <div class="container mx-auto pt-6">
+        <h1
+          class="text-center fade-in-up text-2xl lg:text-4xl mb-4 font-bold p-3 sm:p-0"
+        >
+          <span style="border-left: 2px solid #f79422"
+            >&nbsp; Experts in Stone and Minerals</span
+          >
+        </h1>
+        <p class="text-lg lg:text-xl fade-in-up p-3 sm:p-0">
+          Machame is a leading company specializing in the exploration,
+          extraction, and processing of high-quality natural resources. We are
+          committed to providing our clients with a wide range of products,
+          including Granite, Graphite, Limestone, Nickel, Manganese, Lithium.
+        </p>
+      </div>
+      <div class="wrapper mt-8">
+        <div
+          class="item item1 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Granite
         </div>
-        <div>
-          <img
-            src="F.JPG"
-            alt="Image 1"
-            class="rounded-tl-[5rem] rounded-bl-[5rem] rounded-br-[5rem] w-[150px] h-[150px] text-center"
-          />
-
-          <div class="p-4 text-gray-100">
-            <p class="font-bold">Emma White</p>
-            <p>Product Manager</p>
-          </div>
+        <div
+          class="item item2 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Graphite
         </div>
+        <div
+          class="item item3 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Limestone
+        </div>
+        <div
+          class="item item4 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Nickel
+        </div>
+        <div
+          class="item item5 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Manganese
+        </div>
+        <div
+          class="item item6 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Lithium
+        </div>
+        <div
+          class="item item7 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Copper
+        </div>
+        <div
+          class="item item8 bg-[#2b363c] bg-opacity-10 backdrop-filter backdrop-blur-lg md:border border-white border-opacity-20 shadow-lg rounded-xl"
+        >
+          Iron
+        </div>
+      </div>
+    </div>
+    <!-- about machame -->
+    <div class="w-full lg:h-screen flex flex-col lg:flex-row">
+      <!-- Left Div -->
+      <div
+        class="lg:w-1/2 w-full bg-cover bg-center"
+        style="background-color: #2b363c"
+      >
+        <div class="h-full flex items-center justify-center fade-in-up">
+          <img src="adobe.webp" alt="Centered Image" class="px-12" />
+        </div>
+      </div>
+      <!-- Right Div -->
+      <div
+        class="lg:w-1/2 w-full bg-white p-3 md:p-8 flex items-center justify-center"
+      >
         <div>
-          <img
-            src="F.JPG"
-            alt="Image 1"
-            class="rounded-tl-[5rem] rounded-bl-[5rem] rounded-br-[5rem] w-[150px] h-[150px] text-center"
-          />
-
-          <div class="p-4 text-gray-100">
-            <p class="font-bold">Emma White</p>
-            <p>Product Manager</p>
+          <h1 class="text-2xl lg:text-4xl mb-4 font-bold fade-in-up">
+            <span style="border-left: 2px solid #f79422"
+              >&nbsp; Machame At A Glance</span
+            >
+          </h1>
+          <p class="text-lg lg:text-xl fade-in-up">
+            Our mining company focuses on the exploration, extraction, and
+            processing of valuable minerals. Committed to sustainability, we use
+            advanced technologies to minimize environmental impact and maximize
+            efficiency.
+          </p>
+          <br />
+          <p class="text-lg lg:text-xl fade-in-up">
+            Our expert team ensures high safety and quality standards,
+            delivering premium materials that drive innovation and growth across
+            industries. We lead the mining sector from initial exploration to
+            final processing, contributing to global community development and
+            prosperity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- mining operations -->
+    <div class="w-full pt-6 pb-6" style="background-color: #f8f8f8">
+      <div class="container mx-auto mt-12 md:mt-20 mb-12 text-center">
+        <h1 class="text-2xl lg:text-4xl font-bold fade-in-up">
+          <span style="border-left: 2px solid #f79422"
+            >&nbsp; Mining Process</span
+          >
+        </h1>
+      </div>
+      <div class="p-3 sm:p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="card relative w-full h-64 md:h-80 lg:h-[calc(100vw/3)] rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
+            style="background-image: url('ducky.png')"
+          >
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div
+              class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
+            >
+              <h3 class="text-xl font-semibold mb-2 fade-in-up">
+                Exploration and Discovery
+              </h3>
+              <p class="mb-4 fade-in-up">
+                Our journey starts with extensive exploration using advanced
+                geophysical and geochemical techniques to locate promising
+                mineral deposits.
+              </p>
+              <a href="#" class="text-black hover:underline">Learn More</a>
+            </div>
           </div>
+
+          <!-- Card 2 -->
+          <div
+            class="card relative w-full h-64 md:h-80 lg:h-[calc(100vw/3)] bg-cover bg-center rounded-lg overflow-hidden shadow-lg"
+            style="background-image: url('ip3.jpg')"
+          >
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div
+              class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-white"
+            >
+              <h3 class="text-xl font-semibold mb-2 fade-in-up">
+                Extraction and Processing
+              </h3>
+              <p class="mb-4 fade-in-up">
+                After identifying a mineral deposit, we use state-of-the-art
+                machinery and sustainable practices to carefully extract and
+                process the ore.
+              </p>
+              <a href="#" class="text-white hover:underline">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="card relative w-full h-64 md:h-80 lg:h-[calc(100vw/3)] bg-cover bg-center rounded-lg overflow-hidden shadow-lg"
+            style="background-image: url('ducky.png')"
+          >
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div
+              class="relative z-10 p-3 sm:p-6 flex flex-col justify-start h-full text-black"
+            >
+              <h3 class="text-xl font-semibold mb-2 fade-in-up">
+                Environmental Management
+              </h3>
+              <p class="mb-4 fade-in-up">
+                We prioritize environmental management, implementing waste
+                management, water conservation, and land rehabilitation to
+                minimize ecological impact.
+              </p>
+              <a href="#" class="text-black hover:underline">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Add more cards as needed -->
         </div>
       </div>
     </div>
