@@ -106,6 +106,18 @@
       .item8 {
         animation-delay: calc(30s / 8 * (8 - 8) * -1);
       }
+      .custom-button {
+        border: 2px solid #f97316; /* orange-500 */
+        border-radius: 0.375rem; /* rounded */
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* duration-300 ease-in-out */
+        background-color: #f97316; /* bg-orange-500 */
+        color: white;
+      }
+
+      .custom-button:hover {
+        color: #1f2937; /* gray-900 */
+        background-color: transparent; /* bg-transparent */
+      }
     </style>
   </head>
   <body>
@@ -178,7 +190,8 @@
         <div class="flex items-center justify-center">
           <!-- Modal Button -->
           <button
-            class="text-white px-4 py-2 rounded border-2 border-orange-500 rounded transition duration-300 ease-in-out bg-orange-500 hover:text-gray-900 hover:bg-transparent"
+            href="#"
+            class="relative px-4 py-2 rounded border-2 custom-button"
             onclick="document.getElementById('modal').classList.remove('hidden')"
           >
             Learn More
@@ -187,7 +200,7 @@
           <!-- Modal -->
           <div
             id="modal"
-            class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
+            class="hidden fixed inset-0 bg-opacity-50 flex items-center justify-center"
           >
             <div
               class="bg-white w-11/12 md:w-1/2 lg:w-1/3 p-6 rounded-lg shadow-lg"
@@ -207,14 +220,14 @@
               <p>
                 <a
                   href="tel:1234567"
-                  class="px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-black transition-colors duration-300"
+                  class="px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-black transition-colors duration-300 custom-button"
                 >
                   Call Now
                 </a>
                 &nbsp;
                 <a
                   href="mailto:info@machamemines.com"
-                  class="px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-black transition-colors duration-300"
+                  class="px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-black transition-colors duration-300 custom-button"
                 >
                   Send EMail
                 </a>
@@ -468,14 +481,14 @@
       <div class="text-center mb-36">
         <a
           href="tel:1234567"
-          class="px-6 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-gray-900 transition-colors duration-300"
+          class="custom-button px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-gray-900 transition-colors duration-300"
         >
           Call Now
         </a>
         &nbsp;
         <a
           href="mailto:info@machamemines.com"
-          class="px-6 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-gray-900 transition-colors duration-300"
+          class="custom-button px-4 py-2 text-white rounded border-2 border-orange-500 transition-colors duration-300 ease-in-out bg-orange-500 hover:bg-transparent hover:text-gray-900 transition-colors duration-300"
         >
           Send EMail
         </a>
@@ -490,6 +503,48 @@
     >
       <div class="text-center mb-6">
         <img src="sk.png" alt="logo" class="w-8 h-8" />
+      </div>
+      <div class="flex mb-3">
+        <!-- Facebook Icon -->
+        <a href="#" class="text-gray-400 px-4 hover:text-orange-500">
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 12.072c0-5.512-4.488-10-10-10S2 6.56 2 12.072c0 4.955 3.646 9.042 8.38 9.896v-6.979H7.9v-2.65h2.48v-2.014c0-2.45 1.477-3.788 3.632-3.788 1.035 0 1.925.077 2.185.112v2.536h-1.49c-1.171 0-1.4.557-1.4 1.375v1.798h2.8l-.364 2.65h-2.436v6.978C18.354 21.113 22 16.027 22 12.072z"
+            />
+          </svg>
+        </a>
+        <!-- X Icon -->
+        <a href="#" class="text-gray-400 px-4 hover:text-orange-500">
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 17"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+            />
+          </svg>
+        </a>
+
+        <!-- YouTube Icon -->
+        <a href="#" class="text-gray-400 px-4 hover:text-orange-500">
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.615 3.184a2.87 2.87 0 0 0-2.017-2.029C15.986 1 12.033 1 12.033 1s-3.952 0-5.566.155a2.871 2.871 0 0 0-2.017 2.029C4 4.815 4 7.997 4 7.997s0 3.182.45 4.813c.194.79.775 1.37 1.566 1.564 1.615.155 5.566.155 5.566.155s3.951 0 5.566-.155a2.871 2.871 0 0 0 2.017-2.029c.45-1.631.45-4.813.45-4.813s0-3.182-.45-4.813zm-10.083 8.36V7.454l4.798 2.046-4.798 2.045z"
+            />
+          </svg>
+        </a>
       </div>
       <div class="text-gray-900">
         &copy; <span id="year"></span> Machame Mines.
